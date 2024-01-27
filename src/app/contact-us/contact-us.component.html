@@ -1,0 +1,42 @@
+<div class="contact-container">
+    <h1 class="text-center title">Contact Us</h1>
+</div>
+<div class="container mt-5">
+    <form [formGroup]="sendData" (ngSubmit)="handleForm()">
+        <div class="form-group mt-4">
+            <input formControlName="name" type="text" class="form-control" id="name" name="name" placeholder="Enter your username" >
+            <div *ngIf="sendData.get('name')?.errors && sendData.get('name')?.touched" class="alert alert-danger p-1 small w-50 mx-auto">
+                <p class="mb-0" *ngIf="sendData.get('name')?.getError('required')">First Name Is Required</p>
+                <p class="mb-0" *ngIf="sendData.get('name')?.getError('minlength')">Fisrt Name Min Length 3</p>
+                <p class="mb-0" *ngIf="sendData.get('name')?.getError('maxlengh')">Fisrt Name Max Length 20</p>
+            </div>
+        </div>
+
+        <div class="form-group mt-4">
+            <input formControlName="email" type="email" class="form-control" id="email" name="email" placeholder="Enter your email" >
+            <div *ngIf="sendData.get('email')?.errors && sendData.get('email')?.touched" class="alert alert-danger p-1 small w-50 mx-auto">
+                <p class="mb-0" *ngIf="sendData.get('email')?.getError('required')">Email Is Required</p>
+                <p class="mb-0" *ngIf="sendData.get('email')?.getError('email')">Incorrect Format</p>
+                
+            </div>
+        </div>
+
+        <div class="form-group mt-4">
+            <input formControlName="phone" type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" >
+            <div *ngIf="sendData.get('phone')?.errors && sendData.get('phone')?.touched" class="alert alert-danger p-1 small w-50 mx-auto">
+                <p class="mb-0" *ngIf="sendData.get('phone')?.getError('required')">Phone Number Is Required</p>
+                <p class="mb-0" *ngIf="sendData.get('phone')?.getError('pattern')">Must be Egyption Number</p>
+                
+            </div>
+        </div>
+
+        <button [disabled]="sendData.invalid" type="submit" value="add data" class="btn btn-primary mt-5">Send</button>
+    </form>
+</div>
+<div class="footer">
+    <img src="../../assets/Rectangle 279.png" alt="">
+</div>
+
+    
+
+    

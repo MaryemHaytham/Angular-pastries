@@ -1,0 +1,25 @@
+.testy-container{
+    position: relative;
+}
+.background1 img{
+    position: absolute;
+    height: 100vh;
+    width: 50%;
+}
+.background2 img{
+    position: absolute;
+    right: 50px;
+    height: 100vh;
+    width: 50%;
+}
+
+.title{
+    font-weight: 900;
+    font-size: 90px;
+    color: rgba(201, 138, 64, 1);
+    
+}
+.card-title{
+    font-weight: 600;
+    color: rgba(201, 138, 64, 1);
+}

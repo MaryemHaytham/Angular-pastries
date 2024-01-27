@@ -1,0 +1,22 @@
+<div class="recipe-container">
+    <h1 class="text-center title">Recipes</h1>
+<div class="container mt-5">
+    <div class="row">
+
+
+        <!-- Card 3 -->
+        <div *ngFor="let recipe of recipes |slice:4:7" class="col-lg-4 ">
+            <div class="card">
+                <img [src]="recipe.strMealThumb" class="card-img-top" alt="Photo 3">
+                <div class="card-body">
+                    <h5 class="card-title"> {{recipe.strMeal}} </h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+</div>

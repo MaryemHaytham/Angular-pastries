@@ -1,0 +1,14 @@
+
+.title{
+    font-size: 90px;
+    font-weight: 900;
+    color: rgba(201, 138, 64, 1);
+}
+.card-title{
+    font-weight: 700;
+    color: rgba(201, 138, 64, 1);
+    margin-top: 20px;
+}
+.recipe-container{
+    background-color: rgb(245, 241, 237);
+}
